@@ -1,0 +1,39 @@
+/* EnergiaNoRenovable.css */
+.energia-no-renovable {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('ruta-a-tu-imagen-satelital');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .interactive-region {
+    /* Estiliza tus regiones aquí */
+    position: absolute;
+    width: 100px; /* Dimensiones de ejemplo */
+    height: 100px;
+    background-color: rgba(255, 255, 0, 0.5); /* Color distintivo */
+    cursor: pointer;
+  }
+  
+  .info-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 10;
+    padding: 20px;
+  }
+  

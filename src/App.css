@@ -1,38 +1,60 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-size: cover;
+  height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url('./images/background.jpg'); /* Reemplaza con tu imagen de fondo */
+}
+
+.faculty-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px; /* O el ancho que prefieras */
+  margin: auto;
+}
+
+.faculty-card {
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  width: calc(50% - 10px); /* Restamos 10px para considerar el margen */
+  margin: 5px;
+  height: 300px; /* O la altura que prefieras para tus tarjetas */
+  overflow: hidden;
+}
+
+.faculty-card img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+  object-fit: cover;
+}
+
+.faculty-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 128, 128, 0.3); /* Inicialmente semi-transparente */
+  transition: background-color 0.3s ease;
+}
+
+.faculty-card:hover .overlay {
+  background-color: rgba(255, 255, 255, 0); /* Transparente cuando el mouse está encima */
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 10px;
+  text-align: center;
 }
